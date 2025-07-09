@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><database name="school" schema="school" type="MySQL - 8.0.42">
+   <tables>
+      <table catalog="school" name="grade" numRows="2000" remarks="" type="TABLE">
+         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="GradeID" nullable="false" remarks="" size="10" type="INT" typeCode="4"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="StudentID" nullable="true" remarks="" size="10" type="INT" typeCode="4">
+            <parent catalog="school" column="StudentID" foreignKey="grade_ibfk_1" implied="false" onDeleteCascade="false" table="student"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="ParentID" nullable="true" remarks="" size="10" type="INT" typeCode="4">
+            <parent catalog="school" column="ParentID" foreignKey="grade_ibfk_2" implied="false" onDeleteCascade="false" table="parent"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="ClassName" nullable="true" remarks="" size="7" type="enum('First', 'Second', 'Third', 'Fourth', 'Fifth', 'Sixth', 'Seventh', 'Eight', 'Nineth', 'Tenth')" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="Grade" nullable="true" remarks="" size="10" type="VARCHAR" typeCode="12"/>
+         <primaryKey column="GradeID" sequenceNumberInPK="1"/>
+         <index name="PRIMARY" unique="true">
+            <column ascending="true" name="GradeID"/>
+         </index>
+         <index name="ParentID" unique="false">
+            <column ascending="true" name="ParentID"/>
+         </index>
+         <index name="StudentID" unique="false">
+            <column ascending="true" name="StudentID"/>
+         </index>
+      </table>
+      <table catalog="school" name="parent" numRows="3918" remarks="" type="TABLE">
+         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="ParentID" nullable="false" remarks="" size="10" type="INT" typeCode="4">
+            <child catalog="school" column="ParentID" foreignKey="grade_ibfk_2" implied="false" onDeleteCascade="false" table="grade"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="StudentID" nullable="true" remarks="" size="10" type="INT" typeCode="4">
+            <parent catalog="school" column="StudentID" foreignKey="parent_ibfk_1" implied="false" onDeleteCascade="false" table="student"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="Relation" nullable="true" remarks="" size="6" type="enum('Father', 'Mother')" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="FirstName" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="LastName" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="Phone" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="6" name="Email" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="7" name="Occupation" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="8" name="Address" nullable="true" remarks="" size="65535" type="TEXT" typeCode="-1"/>
+         <primaryKey column="ParentID" sequenceNumberInPK="1"/>
+         <index name="PRIMARY" unique="true">
+            <column ascending="true" name="ParentID"/>
+         </index>
+         <index name="StudentID" unique="false">
+            <column ascending="true" name="StudentID"/>
+         </index>
+      </table>
+      <table catalog="school" name="student" numRows="2000" remarks="" type="TABLE">
+         <column autoUpdated="true" defaultValue="null" digits="0" id="0" name="StudentID" nullable="false" remarks="" size="10" type="INT" typeCode="4">
+            <child catalog="school" column="StudentID" foreignKey="grade_ibfk_1" implied="false" onDeleteCascade="false" table="grade"/>
+            <child catalog="school" column="StudentID" foreignKey="parent_ibfk_1" implied="false" onDeleteCascade="false" table="parent"/>
+         </column>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="1" name="FirstName" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="2" name="LastName" nullable="true" remarks="" size="100" type="VARCHAR" typeCode="12"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="3" name="Gender" nullable="true" remarks="" size="6" type="enum('Male', 'Female', 'Other')" typeCode="1"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="4" name="DOB" nullable="true" remarks="" size="10" type="DATE" typeCode="91"/>
+         <column autoUpdated="false" defaultValue="null" digits="0" id="5" name="Class" nullable="true" remarks="" size="50" type="VARCHAR" typeCode="12"/>
+         <primaryKey column="StudentID" sequenceNumberInPK="1"/>
+         <index name="PRIMARY" unique="true">
+            <column ascending="true" name="StudentID"/>
+         </index>
+      </table>
+   </tables>
+</database>
