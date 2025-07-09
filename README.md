@@ -7,3 +7,6 @@ Tables:
 Students Includes student ID, FirstName, Last Name,Gender, DOBand Class. Provides a detailed profile of each student within the institution.
 Parents Includes Parent ID, Relation, FirstName,LastName,phone,Email.Occupation,Address Establishes the connection between students & parents by using studentID as foreign key
 Grade Records academic performance, including ClassName,Grade Facilitates a comprehensive analysis of student achievements across Years.
+
+Documentation Link here --
+https://chat.google.com/dm/6X4FkCAAAAE/IXngcYrUvM0/IXngcYrUvM0?cls=10
