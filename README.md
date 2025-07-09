@@ -9,4 +9,5 @@ Parents Includes Parent ID, Relation, FirstName,LastName,phone,Email.Occupation,
 Grade Records academic performance, including ClassName,Grade Facilitates a comprehensive analysis of student achievements across Years.
 
 Documentation Link here --
-https://chat.google.com/dm/6X4FkCAAAAE/IXngcYrUvM0/IXngcYrUvM0?cls=10
+https://nidhi-chavan.github.io/schooLDB/
+
