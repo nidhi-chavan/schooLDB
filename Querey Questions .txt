@@ -1,0 +1,23 @@
+Q1. Count of Students in Each Class ?
+
+Q2. Count of Male vs Female Students?
+
+Q3. List students and their grades by class ?
+
+Q4. Students Who Got Grade 'A+' ?
+
+Q5. Get Specific Student's Grade using StudentID ?
+
+Q6. Get Student details by Name including Parent details ?
+
+Q7. Show students born after 2010 with full name, class, and grade ?
+
+Q8. Get students whose parents are doctors ?
+
+Q9. Student who is top one student from Class 10th ?
+
+Q10. Count of Each Grade by Class ?
+
+Q11. Students with Grade 'F' (Fail List) ?
+
+Q12. List of Students with Only One Parent (Either Father or Mother)
